@@ -709,7 +709,7 @@ function! fzf#vim#grep(grep_command, has_column, ...)
   let capname = join(map(words, 'toupper(v:val[0]).v:val[1:]'), '')
   let opts = {
   \ 'column':  a:has_column,
-  \ 'options': ['--ansi', '--prompt', capname.'> ',
+  \ 'options': ['--no-sort', '--ansi', '--prompt', capname.'> ',
   \             '--multi', '--bind', 'alt-a:select-all,alt-d:deselect-all',
   \             '--color', 'hl:4,hl+:12']
   \}
